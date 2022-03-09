@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+	Strongly Typed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>specials</title>
+    <link rel="icon" href="../static/assets/images/logo2.png" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="homepage is-preload">
+    <div id="page-wrapper">
+      <div class="search-box">
+        <button class="btn-search"><i class="fas fa-search"></i></button>
+        <input
+          type="text"
+          class="input-search"
+          placeholder="Type to Search..."
+        />
+      </div>
+
+      <!-- Header -->
+      <section id="header">
+        <div class="container">
+          <!-- Logo -->
+          <h1 id="logo"><a href="../static/index.html">Nugatine</a></h1>
+          <p style="font-size: 160%"><strong>our specials</strong></p>
+
+          <!-- home page -->
+          <nav id="nav">
+            <ul>
+              <li>
+                <a class="icon solid fa-home" href="../static/index.html"
+                  ><span>home page</span></a
+                >
+              </li>
+              <li>
+                <a class="icon solid fa-sitemap" href="shopping-cart.html"
+                  ><span>shopping cart</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="icon fa-chart-bar"><span>products</span></a>
+                <ul>
+                  <li><a href="special.html">Special</a></li>
+                  <li><a href="house-cakes.html">House cakes</a></li>
+                  <li><a href="pastries.html">Pastries</a></li>
+                  <li><a href="tarts.html">Tarts</a></li>
+                  <li><a href="Breads.html">Breads</a></li>
+                  <li><a href="dry-cookies.html">Dry cookies</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="icon solid fa-cog" href="left-sidebar.html"
+                  ><span>Hospitality trays</span></a
+                >
+              </li>
+              <li>
+                <a class="icon solid fa-retweet" href="right-sidebar.html"
+                  ><span>Gift certificates</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features">
+        <div class="container">
+          <ul class="row aln-center">
+            <li class="col-4 col-6-medium col-12-small" th:each = "product : ${listProducts}">
+              <!-- Feature -->
+              <section>
+                <a href="#" class="image featured"
+                ><img th:src="${product.image_path}" alt=""
+                /></a>
+                <header>
+                  <h3>th:text="${product.price}"</h3>
+                </header>
+                <div class="btn-group">
+                  <a href="product.html" class="defaultBtn"><span class=" icon-shopping-cart"></span> Add to cart</a>
+                  <a href="product.html" class="shopBtn">VIEW</a>
+                </div>
+              </section>
+            </li>
+            </ul>
+
+
+            <div class="col-12">
+              <ul class="actions">
+                <li>
+                  <a href="#" class="button icon solid fa-file">Top of page</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </section>
+
+
+
+    <!-- Scripts -->
+    <script src="../static/assets/js/jquery.min.js"></script>
+    <script src="../static/assets/js/jquery.dropotron.min.js"></script>
+    <script src="../static/assets/js/browser.min.js"></script>
+    <script src="../static/assets/js/breakpoints.min.js"></script>
+    <script src="../static/assets/js/util.js"></script>
+    <script src="../static/assets/js/main.js"></script>
+  </body>
+</html>
